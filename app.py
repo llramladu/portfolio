@@ -1,14 +1,6 @@
-from flask import Flask, render_template, session, request, flash, redirect, url_for
-from socket import gethostname
-import random
+from flask import Flask
 
 app = Flask(__name__)
-
-app.config.from_object('config')
-
-CSRFProtect(app)
-
-db = SQLAlchemy(app)
 
 @app.route("/")
 def main():
