@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, request, flash, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -14,10 +14,3 @@ def newGame():
 def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, nothing at this URL.', 404
-
-if __name__ == "__main__":
-	#db.create_all()
-	if 'liveconsole' not in gethostname():
-		app.run(debug = True)
-    #app.run()
-
