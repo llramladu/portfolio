@@ -24,7 +24,7 @@ h3 {
 
 }
 body {
-    background-color: Gainsboro;
+    background-color: Azure;
 }
 
 p {
@@ -50,4 +50,8 @@ p {
 }
 .marketing p + h2 {
   	margin-top: 18px;
+}
+.text-muted h3 {
+  color: FireBrick;
+
 }
