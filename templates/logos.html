@@ -95,9 +95,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <p class="modal-title"></p>
+                <h2><p class="modal-title"></p></h2>
                 <img class="showimage img-responsive" src="" />
-                <p class="modal-text"></p>
+                <h3><p class="modal-text"></p></h3>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -106,20 +106,20 @@
     </div>
     </div>
 
-  <script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function () {
-    $('img').on('click', function () {
-        var image = $(this).attr('data-image-src');
-        var title = $(this).attr('alt');
-        var caption = $(this).attr('data-caption');
-        $('#myModal').on('show.bs.modal', function () {
-            $(".modal-title").text(title);
-            $(".showimage").attr("src", image);
-            $(".modal-text").text(caption);
+        $('img').on('click', function () {
+            var image = $(this).attr('data-image-src');
+            var title = $(this).attr('alt');
+            var caption = $(this).attr('data-caption');
+            $('#myModal').on('show.bs.modal', function () {
+                $(".modal-title").text(title);
+                $(".showimage").attr("src", image);
+                $(".modal-text").text(caption);
+            });
         });
     });
-});
-  </script>
+</script>
 
 </body>
  
