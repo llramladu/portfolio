@@ -22,7 +22,7 @@
         </div>
         <div class="row marketing">
             <h2>Designed from Scratch:</h2>
-                <img src="static/thumbs/NebulaDynamicsLogo1.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/NebulaDynamicsLogo1.jpg" alt="Nebula Dynamics Logo">
+                <img src="static/thumbs/NebulaDynamicsLogo1.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/NebulaDynamicsLogo1.jpg" alt="Nebula Dynamics Logo" data-caption="The Nebula Dynamics logo was created for <a href="http://nebuladynamics.org/">nebuladynaics.org</a>. This Design is based on the helix nebula.">
                 <img src="static/thumbs/DelVechio_Designs_BC.jpg" alt="DelVechio Logo">
             <h2>Recreated:</h2>
                 <img src="static/thumbs/Norden_Logo.jpg" alt="Norden Logo"> 
@@ -51,8 +51,9 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <p class="modal-text"></p>
+                <p class="modal-title"></p>
                 <img class="showimage img-responsive" src="" />
+                <p class="modal-text"></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -65,10 +66,12 @@
     $(document).ready(function () {
     $('img').on('click', function () {
         var image = $(this).attr('data-image-src');
-        var text = $(this).attr('alt');
+        var title = $(this).attr('alt');
+        var caption = $(this).attr('data-caption');
         $('#myModal').on('show.bs.modal', function () {
-            $(".modal-text").text(text);
+            $(".modal-title").text(title);
             $(".showimage").attr("src", image);
+            $(".modal-text").text(caption);
         });
     });
 });
