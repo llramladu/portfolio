@@ -3,6 +3,8 @@
  
 <head>
     <title>LMV Layouts</title> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
 </head>
@@ -20,34 +22,147 @@
         </div>
         <div class="row marketing">
             <h2>Brochures:</h2>
-                <img src="static/thumbs/CMT_Brochure1.jpg" alt="CMT Brochure">
-                <img src="static/thumbs/PESC_Brochure.jpg" alt="PESC Brochure">
-                <img src="static/thumbs/AKON_Brochure.jpg" alt="AKON Brochure">
-                <img src="static/thumbs/PLCC_Brochure.jpg" alt="PLCC Brochure">
-                <img src="static/thumbs/Filtronic_QRG_Sum_07-1.jpg" alt="Filtronic Brochure">
+            <div class="row">
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/CMT_Brochure1.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/CMT_Brochure1.jpg" alt="CMT Brochure" data-caption="The CMT brochure folder was laid out based on the customer’s specifications with and images provided.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/PESC_Brochure.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/PESC_Brochure.jpg" alt="PESC Brochure" data-caption="This Peninsula Eye Surgery Center’s brochure was modified and changed to update text as their processes and procedures changed. This job was very complicated to print, because of the yellow background, and getting the blue’s to match the previous print run.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/AKON_Brochure.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/AKON_Brochure.jpg" alt="AKON Brochure" data-caption="The Akon brochure was laid out based on the customer’s specifications with text, logos and images provided. ">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/PLCC_Brochure.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/PLCC_Brochure.jpg" alt="PLCC Brochure" data-caption="PorchLight Custom Counseling’s brochure was laid out based on the customer’s specifications with all text and images provided.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/Filtronic_QRG_Sum_07-1.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/Filtronic_QRG_Sum_07-1.jpg" alt="Filtronic Brochure" data-caption="This Filtronic Brochure isn’t a new design, but was created based on the customer’s specifications, and only the pictures and text were provided. The logo was created for this project.">
+                    </a>
+                </div>
+            </div>
             <h2>Advertisments:</h2>
-                <img src="static/thumbs/OML_Ad.jpg" alt="OML Ad"> 
-                <img src="static/thumbs/NordenLookTo.jpg" alt="Norden Ad">    
-                <img src="static/thumbs/KOR_ad.jpg" alt="KOR Ad">       
-                <img src="static/thumbs/CMT_Ad.jpg" alt="CMT Ad">      
-                <img src="static/thumbs/NordenAdRCN.jpg" alt="Norden Ad">                                 
+            <div class="row">
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/OML_Ad.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/OML_Ad.jpg" alt="OML Ad" data-caption="This OML ad includes other previous ads. The products had to be edited to remove the backgrounds. This is just one of in series of advertisements."> 
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/NordenLookTo.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/NordenLookTo.jpg" alt="Norden Ad" data-caption="This Norden Millimeter ad had to be laid out, the product images had to be edited to remove the backgrounds. The customer wanted to add the feather effect to the images. Also the white box in the bottom of the ad had to be used since the logo doesn’t work very well on dark backgrounds.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">    
+                        <img src="static/thumbs/KOR_ad.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/KOR_ad.jpg" alt="KOR Ad" data-caption="This KOR ad uses a stock photo image, which had to have the edges softened so that it could be placed on a black background and have it work. For this ad the customer provided the text and image, but the logo was a recreation.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">       
+                        <img src="static/thumbs/CMT_Ad.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/CMT_Ad.jpg" alt="CMT Ad" data-caption="This CMT ad had to be laid out, with images, logos and text provided. The product images had to be edited to remove backgrounds and add drop shadows.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">      
+                        <img src="static/thumbs/NordenAdRCN.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/NordenAdRCN.jpg" alt="Norden Ad" data-caption="This Norden ad had to be laid out, with images, logos and text provided. The product images had to be edited to remove backgrounds.">                                 
+                    </a>
+                </div>
+            </div>
             <h2>Business Cards:</h2>
-                <img src="static/thumbs/Wizard_of_Paws_BC_fr_SC2.jpg" alt="Wizard of Paws BC">
-                <img src="static/thumbs/JGA_BC.jpg" alt="JGA BC">
-                <img src="static/thumbs/Nautilus_Banner.jpg" alt="Nautilus BC">
-                <img src="static/thumbs/PLCC_BC.jpg" alt="PLCC BC">
+            <div class="row">
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/Wizard_of_Paws_BC_fr_SC2.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/Wizard_of_Paws_BC_fr_SC2.jpg" alt="Wizard of Paws BC" data-caption="The Wizard of Paws business cards were laid out based on the customer’s specifications. For these business cards logo was provided, but required editing. Multiple proofs were created for these business cards using different fonts and styles.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">    
+                        <img src="static/thumbs/JGA_BC.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/JGA_BC.jpg" alt="JGA BC" data-caption="Johnson Graphic Arts’ business cards were laid out based on the customer specifications.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">    
+                        <img src="static/thumbs/Nautilus_Banner.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/Nautilus_Banner.jpg" alt="Nautilus BC" data-caption="These Nautilus business cards were laid out based on the customer specifications.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">    
+                        <img src="static/thumbs/PLCC_BC.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/PLCC_BC.jpg" alt="PLCC BC" data-caption="These PorchLight Custom Counseling business cards were laid out based on the customer specifications.">
+                    </a>
+                </div>
+            </div>
             <h2>Other Layouts:</h2>
-                <img src="static/thumbs/HobeesKidsMenu.jpg" alt="Hobees Kids Menu"> 
-                <img src="static/thumbs/ML_PL.jpg" alt="MicroLambda Placecard"> 
-                <img src="static/thumbs/BLF_Env.png" alt="BLF Envelope"> 
-                <img src="static/thumbs/IKB_20Yr_logo.png" alt="IKB 20Yr"> 
-                <img src="static/thumbs/transportation_icon.png" alt="Icons"> 
+            <div class="row">
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="static/thumbs/HobeesKidsMenu.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/HobeesKidsMenu.jpg" alt="Hobees Kids Menu" data-caption="This menu was created for Hobees Restaurant. For this menu the logo had to be edited, the crayon images created, the text had to be typeset and everything had to be laid out."> 
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">    
+                        <img src="static/thumbs/ML_PL.jpg" data-toggle="modal" data-target="#myModal" data-image-src="static/ML_PL.jpg" alt="MicroLambda Placecard" data-caption="This MicroLambda place card was used during a trade show.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">     
+                        <img src="static/thumbs/BLF_Env.png" data-toggle="modal" data-target="#myModal" data-image-src="static/BLF_Env.png" alt="BLF Envelope" data-caption="For the Beth Longwell Foundation uses different designs for their logo, envelopes and event cards each year. This is the design that was used on one of their envelopes.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">     
+                        <img src="static/thumbs/IKB_20Yr_logo.png" data-toggle="modal" data-target="#myModal" data-image-src="static/IKB_20Yr_logo.png" alt="IKB 20Yr" data-caption="This was the logo that IKB needed created for their celebration of twenty years in business.">
+                    </a>
+                </div>
+                <div class="row-xs-2 col-md-2">
+                    <a href="#" class="thumbnail">     
+                        <img src="static/thumbs/transportation_icon.png" data-toggle="modal" data-target="#myModal" data-image-src="static/icons.jpg" alt="Icons" data-caption="These icons were created and used for a Stanford University year in review book.">
+                    </a>
+                </div>
+            </div>   
+            <h4>Files on this website are not vector based or high-resolution, but vector based files exist for all of them.</h4>
         </div> 
         <footer class="footer">
             <p>Written and created by Leanne Vermillion 2018.</p>
         </footer>
     </div>
+    <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2><p class="modal-title"></p></h2>
+                <img class="showimage img-responsive" src="" />
+                <h3><p class="modal-text"></p></h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('img').on('click', function () {
+            var image = $(this).attr('data-image-src');
+            var title = $(this).attr('alt');
+            var caption = $(this).attr('data-caption');
+            $('#myModal').on('show.bs.modal', function () {
+                $(".modal-title").text(title);
+                $(".showimage").attr("src", image);
+                $(".modal-text").text(caption);
+            });
+        });
+    });
+</script>
 </body>
  
 </html>
