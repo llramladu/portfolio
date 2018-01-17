@@ -56,7 +56,7 @@ p {
 
 }
 .thumbnail {
-    max-width: 100%;
+    width: 160px;
     height: auto;
-    border: 5px solid #1A665D;
+    border: 5px solid Gainsboro;
 }
