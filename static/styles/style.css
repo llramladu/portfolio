@@ -55,7 +55,7 @@ p {
   color: FireBrick;
 
 }
-img {
+.thumbnail {
     max-width: 100%;
     height: auto;
     border: 5px solid #1A665D;
